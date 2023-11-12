@@ -1,14 +1,14 @@
 body {
-    background-color: black;
+	background-color: black;
 }
 
 .main {
-    color: antiquewhite;
+	color: antiquewhite;
 }
 
 .meist {
-    float: right;
-    border-width: 1px;
-    border-color: aqua;
-    border-style: dotted;
+	float: right;
+	border-width: 1px;
+	border-color: aqua;
+	border-style: dotted;
 }

@@ -1,29 +1,27 @@
 # grupileht
+
 infovahetus zulipis
-plaan 
+plaan
 koosolekud esmaspäeval peale matat kui vaja
 kauri githubis
 koduleht?
 
 püütoni 2 astmelise listi kasutamise õpetus
 css stiil
-javascript 
+javascript
 
-
-osad 
+osad
 pealkiri
 linkidega vahepealkirjad
 välislingid lõppu
-koodi samm samm seletus 
+koodi samm samm seletus
 koodi väljund
 jsiga koodi parandamise ülesanne
 
-
-
 tööjaotus
-kaur    kõike
+kaur kõike
 jako turro
-rasmus  kõike
+rasmus kõike
 
 veebilehel enne sisu siis kujundus
 väline css
