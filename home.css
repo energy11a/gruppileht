@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+.main {
+    color: antiquewhite;
+}
+
+.meist {
+    float: right;
+    border-width: 10px;
+    border-color: aqua;
+    border-style: dashed;
+}
