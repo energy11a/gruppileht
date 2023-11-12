@@ -8,7 +8,7 @@ body {
 
 .meist {
     float: right;
-    border-width: 10px;
+    border-width: 1px;
     border-color: aqua;
-    border-style: dashed;
+    border-style: dotted;
 }
