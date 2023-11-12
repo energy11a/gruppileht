@@ -1,0 +1,6 @@
+.vertical-block {
+	display: inline-block; /* This makes the blocks appear horizontally by default */
+	vertical-align: top; /* Aligns the blocks to the top */
+	width: 40%; /* Adjust the width as needed */
+	margin: 3%; /* Adjust the margin as needed */
+}
