@@ -3,9 +3,10 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-size: auto;
-	background-color: rgba(80,80,80,1);
+	background-color: rgba(80, 80, 80, 1);
 	background-blend-mode: multiply;
 	font-family: Arial, Helvetica, sans-serif;
+	overflow: hidden; /* Prevent the screen from expanding when the object leaves the screen */
 }
 
 .main {
@@ -32,4 +33,22 @@ a.custom-link {
 /* Style for visited links */
 a.custom-link:visited {
 	color: aquamarine; /* Change this to the desired color for visited links */
+}
+
+.objekt {
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	z-index: -1;
+}
+
+@keyframes lenda {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
 }
