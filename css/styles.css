@@ -52,3 +52,8 @@ a.custom-link:visited {
 		transform: translate(0, 0);
 	}
 }
+
+.code{
+	color: green;
+	margin: 3%;
+}

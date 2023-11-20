@@ -23,6 +23,44 @@
 			</ul>
 		</div>
 
+		<div class="main">
+			<h2>Astmelised listid</h2>
+			<p>Astmelised listid on listid, mis on teise listi sees ja nende abil saab hästi kordinaatsüsteemi kujutada.</p>
+			<pre class="code">
+[["1","1","1","2","x","1"," "," ","1","1"],
+ ["x","1","1","x","3","2"," "," ","1","x"],
+ ["1","1","2","4","x","2"," "," ","1","1"],
+ [" "," ","1","x","x","2"," "," ","1","1"],
+ [" "," ","1","2","2","1"," "," ","1","x"],
+ [" "," "," ","1","2","2","1"," ","1","1"],
+ ["1","1","2","2","x","x","2"," "," "," "],
+ ["1","x","2","x","x","x","2"," "," "," "],
+ ["1","1","2","2","3","2","1","1","1","1"],
+ [" "," "," "," "," "," "," ","1","x","1"]]</pre>
+			 <p>Näites on toodud listid on kasutatud <i>Minesweeper</i> mängu andmete salvestamiseks.</p>
+			 <p>järgmises näites on toodud kood mis teeb laadse tabeli ilma numbriteta.</p>
+			 <pre class="code">
+import random
+x=10#laius hetkel listi teine aste
+y=10#kõrgus
+list_auto_f=[]#lõpptulemuse jaoks tühi list
+miini_sajakohta=10#mediaan soovitud tulemus
+for i in range(0,y,1):
+list_auto_i=[]#list iga rea kohta
+for j in range(0,x,1):
+list_auto_i.append(" ")
+list_auto_f.append(list_auto_i)# lisa realist lõpplisti lõppu
+#print(list_auto_i)
+
+for k in range(y):#sama mis (0,y,1)
+for l in range(x):
+if random.randint(0, xy)>(100-miini_sajakohta)/100yx:#kui juhuslik arv nullist kuni xy on suurem kui mediaan
+list_auto_f[k][l]="x"#lisan miinid
+print(list_auto_f[k])#prindin listi rea haaval, kuna muidu on kõik samal real
+			 </pre>
+
+		</div>
+
 		<div class="objekt"></div>
 		<script src="js/objekt.js"></script>
 	</body>
