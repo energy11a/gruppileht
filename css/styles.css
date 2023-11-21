@@ -57,3 +57,7 @@ a.custom-link:visited {
 	color: green;
 	margin: 3%;
 }
+.img{
+	float: left;
+	border: 3px;
+}

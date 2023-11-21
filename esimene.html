@@ -11,20 +11,22 @@
 	</head>
 	<body>
 		<div class="main">
-			<h1>Esimene etapp: Paigaldus</h1>
+			<h1>Esimene etapp: Hakka julgelt pihta</h1>
 			
 			<br>
 			<br>
-			<p>Sammud:</p>
+			<p>Sisu:</p>
 			<ul>
-				<li>Esimene samm</li>
-				<li>Teine samm</li>
-				<li>Kolmas samm</li>
+				<li><a href="#div_id4">astmelised listid</a></li>
+				<li><a href="#div_id5">list comprehension</a></li>
+				<li><a href="#div_id1">koodi loetavus</a></li>
+				<li><a href="#div_id2">olemasoleva koodi taaskasutamine</a></li>
+				<li><a href="#div_id3">lisavõimalused</a></li>
 			</ul>
 		</div>
 
 		<div class="main">
-			<h2>Astmelised listid</h2>
+			<h2 id="div_id4">Astmelised listid</h2>
 			<p>Astmelised listid on listid, mis on teise listi sees.</p>
 			<p>Kaheastmelisi liste kutsutakse maatriksiteks ja nende abil saab hästi kordinaatsüsteemi kujutada.</p>
 			<pre class="code">
@@ -59,7 +61,7 @@ for k in range(y):#sama mis (0,y,1)
 			list_auto_f[k][l]="x"#lisan miinid
 	print(list_auto_f[k])#prindin listi rea haaval, kuna muidu on kõik samal real
 			 </pre>
-			 <p>Sama asja saab ka lühemalt kirjutada, kasutades list comprehensionit.</p>
+			 <p id="div_id5">Sama asja saab ka lühemalt kirjutada, kasutades list comprehensionit.</p>
 			 <pre class="code">
 import random
 x=10#laius hetkel listi teine aste
@@ -70,11 +72,42 @@ print(*newlist, sep="\n")
 			 </pre>
 			 <p>Kood kirjutab elemendiks "x" kui *tingimus* muidu " " korrates x korda.</p>
 			 <p>Eelmist rida kordab y korda ja paneb tulemused listi.</p>
-			 <p>Siin on lingid õppematerjalidele.</p>
-			 <a href="https://stackoverflow.com/questions/54111636/printing-list-elements-in-python-with-a-single-line-code" target="_blank" referrerpolicy="no-referrer">listi printimine elementide haaval</a>
-			 <br>
-			 <a href="https://www.w3schools.com/python/python_lists_comprehension.asp" target="_blank" referrerpolicy="no-referrer">list comprehension</a>
+			 
+		</div>
 
+		<div id="div_id1" class="main">
+			<h2>koodi loetavus</h2>
+			<p>
+				Keegi ei taha lugeda segast koodi ja vigade korral on neid raske leida.
+				<br>
+				<img calss="img" src="https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Jokes-Coding-Error-1024x860.jpg" alt="kehva koodi loetavus" style="width:300px;height:250px;">
+				<br>
+				Hea  harjumus on koodis panna selged muutujanimed ja vajadusel kommenteerida koodi.
+				<br>
+				Aitab ka tegevuste funktsioonidesse panemine. See teeb koodi loetavamaks ja võimaldab asju taaskasutada.
+			</p>
+		</div>
+		<div id="div_id2" class="main">
+			<h2>koodi taaskasutamine</h2>
+			<p>
+				Koodi saab taaskasutada kirjutades tegevused funktsioonidesse nii saab sama koodi kasutada eri parameetritega. 
+				<br>
+				Püütonis on palju sisseehitatud teeke. Nende teekide funktsioonid on tavaliselt kiiremad kui enda kirjutatud funktsioonid.
+				<br>
+				Leidub ka teiste inimeste kirjutatud teeke
+				Seda kirjutades on saidil pypi.org avaldatud 495979 teeki.
+				<br>
+				Neid teeke kasutades ei pea ise ratast leiutama vaid saab olemasolevat kasutada.
+			</p>
+		</div>
+		<div id="div_id3" class="main">
+			<h2>lisavõimalused</h2>
+			<p>Siin on lingid õppematerjalidele.</p>
+			<a href="https://stackoverflow.com/questions/54111636/printing-list-elements-in-python-with-a-single-line-code" target="_blank" referrerpolicy="no-referrer">listi printimine elementide haaval</a>
+			<br>
+			<a href="https://www.w3schools.com/python/python_lists_comprehension.asp" target="_blank" referrerpolicy="no-referrer">list comprehension</a>
+			<br>
+			<a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3" target="_blank" referrerpolicy="no-referrer">pypi.org</a>
 		</div>
 
 		<div class="objekt"></div>
