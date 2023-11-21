@@ -6,7 +6,7 @@ body {
 	background-color: rgba(80, 80, 80, 1);
 	background-blend-mode: multiply;
 	font-family: Arial, Helvetica, sans-serif;
-	overflow: hidden; /* Prevent the screen from expanding when the object leaves the screen */
+	/*overflow: hidden; /* Prevent the screen from expanding when the object leaves the screen */
 }
 
 .main {
