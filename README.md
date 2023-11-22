@@ -20,7 +20,7 @@ jsiga koodi parandamise ülesanne
 
 tööjaotus
 kaur kõike
-jako turro
+jakko turro
 rasmus kõike
 
 veebilehel enne sisu siis kujundus
