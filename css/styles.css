@@ -1,12 +1,13 @@
 body {
 	background-image: url("../media/images/taustapilt.jpg");
 	background-size: cover;
-	background-repeat: no-repeat;
+	/* background-repeat: no-repeat; */
 	background-size: auto;
 	background-color: rgba(80, 80, 80, 1);
 	background-blend-mode: multiply;
 	font-family: Arial, Helvetica, sans-serif;
 	/*overflow: hidden; /* Prevent the screen from expanding when the object leaves the screen */
+	font-size: 20px;
 }
 
 .main {
@@ -16,14 +17,21 @@ body {
 
 h1 {
 	text-align: center;
-	margin: 0px;
-	
+	margin-bottom: 3%;
 }
 
 h2 {
 	text-align: center;
-	margin: 0px;
 }
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 2px solid antiquewhite;
+	margin: 1em 0;
+	padding: 0;
+  }
 
 /* Style for the hyperlink */
 a.custom-link {
@@ -54,16 +62,26 @@ a.custom-link:visited {
 	}
 }
 
-.code{
-	color: green;
-	margin: 3%;
-}
-.img{
-	
+.img {
 	border: 3px;
 }
 
-.footer{
+.footer {
+	background-image: url("../media/images/kuu.jpg");
+	background-size: cover;
+	background-size: auto;
+	background-color: rgba(180, 180, 180, 1);
+	background-blend-mode: multiply;
+	width: 90%;
+	border: 0.3rem solid rgb(161, 139, 13);
+	border-radius: 2rem;
+	box-shadow: 1px 1px 0.5rem #378602 inset;
+	padding: 50px;
+	margin: 20px;
+	text-shadow: 1px 1px 2px rgb(161, 139, 13), 0 0 1em black, 0 0 0.2em #378602;
+ 	margin-top: 10%;
+}
+
+.footer_bottom {
 	text-align: center;
-	color: antiquewhite;
 }
