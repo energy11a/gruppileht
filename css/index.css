@@ -5,6 +5,9 @@
 	margin: 3%; /* Adjust the margin as needed */
 	line-height: 1.5;
 	text-align: justify;
-	border: 2px solid#352e2e;
+	/* border: 2px solid#352e2e; */
 	padding: 10px;
+	border: 0.3rem solid rgb(161, 139, 13);
+	border-radius: 2rem;
+	box-shadow: 1px 1px 0.5rem #378602 inset;
 }
