@@ -1,0 +1,23 @@
+.Nupp {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #202020; /* background color */
+    color: #fff; /* White text color */
+    border: 2px solid #363636; /*  border */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition on hover */
+    cursor: pointer;
+}
+
+/* Change the button style on hover */
+.Nupp:hover {
+    background-color: #555; /* Lighter on hover */
+    color: #fff; /* White text on hover */
+}
+.Nupp:visited {
+    background-color: #2c103d;
+}
