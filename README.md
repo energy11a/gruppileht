@@ -1,4 +1,5 @@
-# grupileht
+# Sissejuhatus erialasse projekt: Pythoni kaheastmelist listi tutvustav veebileht!  
+
 
 infovahetus zulipis
 plaan
