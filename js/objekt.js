@@ -26,14 +26,14 @@ function setRandomPosition() {//paneb juhusiku positsiooni ja pildi ja liigutab 
 	const maxX = window.innerWidth - element.clientWidth;
 	const maxY = window.innerHeight - element.clientHeight;
 
-	const spriteWidth = 50;
-	const spriteHeight = 50;
+	const spriteWidth = 50;//alguslaius
+	const spriteHeight = 50;//algus kõrgus
 
 	let randomStartX = 0;
 	let randomStartY = 0;
 	let randomFinishX = 0;
 	let randomFinishY = 0;
-	if (Math.random() < 0.5) {
+	if (Math.random() < 0.5) {//juhuslikud alguspositsioonid
 		randomStartX = spriteWidth;
 		randomStartY = Math.floor(Math.random() * maxY) - 500;
 		randomFinishX = maxX;
@@ -44,11 +44,11 @@ function setRandomPosition() {//paneb juhusiku positsiooni ja pildi ja liigutab 
 		randomFinishX = Math.floor(Math.random() * maxX);
 		randomFinishY = maxY - 500;
 	}
-	if (Math.random() < 0.5) {
+	if (Math.random() < 0.5) {//vahetab muutujad juhuslikult omavahel ära
 		[randomStartX, randomFinishX] = [randomFinishX, randomStartX];
 	}
 
-	const rotation =
+	const rotation =//pööramise arvutus
 		angle(randomStartX, randomStartY, randomFinishX, randomFinishY) + 45;
 
 	element.style.width = `${spriteWidth}px`;
