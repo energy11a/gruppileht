@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-	const minute = 60000;
+	const minute = 60000;//1 minut millisekundites
 
-	setTimeout(function () {
+	setTimeout(function () {//ootab kuni minuti et käivitada, käivitub juhusliku valiku põhjal ka varem
 		setRandomPosition();
 	}, Math.random() * minute);
 });
 
-function angle(cx, cy, ex, ey) {
+function angle(cx, cy, ex, ey) {//arvutab nurga kui palju on pööratud
 	var dy = ey - cy;
 	var dx = ex - cx;
 	var theta = Math.atan2(dy, dx); // range (-PI, PI]
@@ -15,7 +15,7 @@ function angle(cx, cy, ex, ey) {
 	return theta;
 }
 
-function setRandomPosition() {
+function setRandomPosition() {//paneb juhusiku positsiooni ja pildi ja liigutab pilti
 	const element = document.querySelector(".objekt");
 	if (Math.random() < 0.5) {
 		element.style.backgroundImage = `url("../media/images/rakett.png")`;
@@ -56,7 +56,7 @@ function setRandomPosition() {
 
 	// Create the ending keyframe dynamically
 	const styleTag = document.styleSheets[0];
-	const keyframesRule = styleTag.insertRule(
+	const keyframesRule = styleTag.insertRule(//tekitab animatsiooni
 		`@keyframes translateToEnd {
             0% {
                 transform: translate(${randomStartX}px, ${randomStartY}px) rotate(${rotation}deg); filter: brightness(0%);
@@ -72,10 +72,10 @@ function setRandomPosition() {
 	);
 
 	// Apply the translation using the dynamically created keyframe
-	element.style.animation = "translateToEnd 3s linear 1";
+	element.style.animation = "translateToEnd 3s linear 1";//paneb elemendile animatsiooni
 
 	// Hide the element after the animation completes
-	element.addEventListener("animationend", function () {
+	element.addEventListener("animationend", function () {//peidab elemendi
 		element.style.display = "none";
 	});
 }
