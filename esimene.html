@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="et">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8" >
 		<meta
 			name="Esimene etapp"
 			content="width=device-width, initial-scale=1.0"
-		/>
+		>
 		<title>Esimene etapp</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<link rel="stylesheet" type="text/css" href="PrismJS/prism.css" />
 		<script src="PrismJS/prism.js"></script>
 	</head>
 	<body>
-		
 		<div class="main">
 			<h1>Esimene etapp: Hakka julgelt pihta</h1>
 
@@ -35,11 +34,9 @@
 					</li>
 				</ul>
 			</nav>
-			
-      <hr />
-      
+      <hr >
 			<br>
-			<h2 style="text-align: left;">Sisu:</h2>
+			<h2 >Sisu:</h2>
 
 			<ul>
 				<li>
@@ -69,9 +66,9 @@
 			height="82"
 			width="290"
 			alt="Python"
-		/>
+		>
 
-		<hr />
+		<hr >
 
 		<div class="main">
 			<h2 id="div_id4">Astmelised listid</h2>
@@ -115,7 +112,7 @@ for i in range(0,y,1):
 
 for k in range(y):#sama mis (0,y,1)
 	for l in range(x):
-		if random.randint(0, xy)>(100-miini_sajakohta)/100yx:#kui juhuslik arv nullist kuni xy on suurem kui mediaan
+		if random.randint(0, xy)&gt;(100-miini_sajakohta)/100yx:#kui juhuslik arv nullist kuni xy on suurem kui mediaan
 			list_auto_f[k][l]="x"#lisan miinid
 	print(list_auto_f[k])#prindin listi rea haaval, kuna muidu on kõik samal real
 			</code></pre>
@@ -131,7 +128,7 @@ import random
 x=10#laius hetkel listi teine aste
 y=10#kõrgus
 miini_sajakohta=10#mediaan soovitud tulemus
-newlist = [["x" if (random.randint(0, x*y)>(100-miini_sajakohta)/100*y*x) else " " for j in range(x) ] for i in range(y)]
+newlist = [["x" if (random.randint(0, x*y)&gt;(100-miini_sajakohta)/100*y*x) else " " for j in range(x) ] for i in range(y)]
 print(*newlist, sep="\n")
 			</code></pre>
 			<p>
@@ -141,15 +138,15 @@ print(*newlist, sep="\n")
 			<p>Eelmist rida kordab y korda ja paneb tulemused listi.</p>
 		</div>
 
-		<hr />
+		<hr >
 
 		<div id="div_id1" class="main">
 			<h2>Koodi loetavus</h2>
 			<p>
 				Keegi ei taha lugeda segast koodi ja vigade korral on neid raske
 				leida.
-				<br />
-				<br />
+				<br >
+				<br >
 				<img
 					class="img"
 					src="https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Jokes-Coding-Error-1024x860.jpg"
