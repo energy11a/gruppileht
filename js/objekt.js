@@ -1,3 +1,6 @@
+// Koodi autor on Rasmus Valk koos ChatGPT abiga
+
+// Kuulaja -- töötab juhuslikul hetkel esimese 60s jooksul peale lehe laadimist
 document.addEventListener("DOMContentLoaded", function () {
 	const minute = 60000;
 
@@ -6,16 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	}, Math.random() * minute);
 });
 
+// Arvutab nurga kahe punkti vahelise sirge ja x-telje vahel
 function angle(cx, cy, ex, ey) {
 	var dy = ey - cy;
 	var dx = ex - cx;
-	var theta = Math.atan2(dy, dx); // range (-PI, PI]
-	theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
-	//if (theta < 0) theta = 360 + theta; // range [0, 360)
+	var theta = Math.atan2(dy, dx);
+	theta *= 180 / Math.PI; // rad -> deg
 	return theta;
 }
 
+// Objekti loogika
 function setRandomPosition() {
+	// Pildi valimine
 	const element = document.querySelector(".objekt");
 	if (Math.random() < 0.5) {
 		element.style.backgroundImage = `url("../media/images/rakett.png")`;
@@ -23,16 +28,20 @@ function setRandomPosition() {
 		element.style.backgroundImage = `url("../media/images/asteroid.png")`;
 	}
 
+	// Akna piirid
 	const maxX = window.innerWidth - element.clientWidth;
 	const maxY = window.innerHeight - element.clientHeight;
 
+	// Pildi suurus
 	const spriteWidth = 50;
 	const spriteHeight = 50;
 
+	// Algus- ja lõppkoordinaadid
 	let randomStartX = 0;
 	let randomStartY = 0;
 	let randomFinishX = 0;
 	let randomFinishY = 0;
+	// Nende juhuslik seadmine
 	if (Math.random() < 0.5) {
 		randomStartX = spriteWidth;
 		randomStartY = Math.floor(Math.random() * maxY) - 500;
@@ -48,13 +57,15 @@ function setRandomPosition() {
 		[randomStartX, randomFinishX] = [randomFinishX, randomStartX];
 	}
 
+	// Nurga arvutamine
 	const rotation =
 		angle(randomStartX, randomStartY, randomFinishX, randomFinishY) + 45;
 
+	// CSSi muutmine
 	element.style.width = `${spriteWidth}px`;
 	element.style.height = `${spriteHeight}px`;
 
-	// Create the ending keyframe dynamically
+	// Võtmekaadrite seadmine
 	const styleTag = document.styleSheets[0];
 	const keyframesRule = styleTag.insertRule(
 		`@keyframes translateToEnd {
@@ -71,10 +82,10 @@ function setRandomPosition() {
 		styleTag.cssRules.length
 	);
 
-	// Apply the translation using the dynamically created keyframe
+	// CSSi muutmine
 	element.style.animation = "translateToEnd 3s linear 1";
 
-	// Hide the element after the animation completes
+	// Objekti peitmine kõige lõpus
 	element.addEventListener("animationend", function () {
 		element.style.display = "none";
 	});
