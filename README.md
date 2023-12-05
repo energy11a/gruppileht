@@ -1,27 +1,8 @@
-# grupileht
+# Sissejuhatus erialasse projekt: Pythoni kaheastmelist listi tutvustav veebileht!  
 
-infovahetus zulipis
-plaan
-koosolekud esmaspäeval peale matat kui vaja
-kauri githubis
-koduleht?
+See on sissejuhatus erialasse projekti raames valminud veebileht.
 
-püütoni 2 astmelise listi kasutamise õpetus
-css stiil
-javascript
+Tegemist on rühmatööga mille autorid on: Jakko, Kaur, Rasmus
 
-osad
-pealkiri
-linkidega vahepealkirjad
-välislingid lõppu
-koodi samm samm seletus
-koodi väljund
-jsiga koodi parandamise ülesanne
-
-tööjaotus
-kaur kõike
-jakko turro
-rasmus kõike
-
-veebilehel enne sisu siis kujundus
-väline css
+Leht on interaktiivne ja sisaldab ka ühte väikest "Easter egg'i"
+Lehe loomisel on kasutatud HTMLi, ühtset CSS stiili ja JavaScripti.

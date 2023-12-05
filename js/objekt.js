@@ -2,9 +2,9 @@
 
 // Kuulaja -- töötab juhuslikul hetkel esimese 60s jooksul peale lehe laadimist
 document.addEventListener("DOMContentLoaded", function () {
-	const minute = 60000;
+	const minute = 60000;//1 minut millisekundites
 
-	setTimeout(function () {
+	setTimeout(function () {//ootab kuni minuti et käivitada, käivitub juhusliku valiku põhjal ka varem
 		setRandomPosition();
 	}, Math.random() * minute);
 });
@@ -53,7 +53,7 @@ function setRandomPosition() {
 		randomFinishX = Math.floor(Math.random() * maxX);
 		randomFinishY = maxY - 500;
 	}
-	if (Math.random() < 0.5) {
+	if (Math.random() < 0.5) {//vahetab muutujad juhuslikult omavahel ära
 		[randomStartX, randomFinishX] = [randomFinishX, randomStartX];
 	}
 
@@ -67,7 +67,7 @@ function setRandomPosition() {
 
 	// Võtmekaadrite seadmine
 	const styleTag = document.styleSheets[0];
-	const keyframesRule = styleTag.insertRule(
+	const keyframesRule = styleTag.insertRule(//tekitab animatsiooni
 		`@keyframes translateToEnd {
             0% {
                 transform: translate(${randomStartX}px, ${randomStartY}px) rotate(${rotation}deg); filter: brightness(0%);

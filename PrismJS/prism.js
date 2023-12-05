@@ -1990,3 +1990,5 @@ var _self =
 			});
 	}
 })();
+//JS kasutab regeksit, et leida püütoni kood ja muuta see css abil värviliseks
+

@@ -35,7 +35,7 @@ pre[class*="language-"] {
 }
 pre[class*="language-"] {
 	padding: 1em;
-	margin: 0.5em 0.5;
+	margin: 0.5em 0.5em;
 	overflow: auto;
 	border: 0.3em solid rgb(161, 139, 13);
 	border-radius: 0.5em;
@@ -114,7 +114,7 @@ pre[data-line] {
 	position: absolute;
 	left: 0;
 	right: 0;
-	padding: inherit 0;
+	padding: inherit;
 	margin-top: 1em;
 	background: hsla(24, 20%, 50%, 0.08);
 	background: linear-gradient(
@@ -129,7 +129,7 @@ pre[data-line] {
 @media print {
 	.line-highlight {
 		-webkit-print-color-adjust: exact;
-		color-adjust: exact;
+		print-color-adjust: exact;
 	}
 }
 .line-highlight:before,
@@ -235,6 +235,7 @@ div.code-toolbar > .toolbar > .toolbar-item > button {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	user-select: none;
 }
 div.code-toolbar > .toolbar > .toolbar-item > a,
 div.code-toolbar > .toolbar > .toolbar-item > button,

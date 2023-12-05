@@ -2,7 +2,7 @@
 
 // Pilt mida esmalt näidatakse
 let slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex);//näitab slaidi
 
 // Järgmine/eelmine pilt
 function plusSlides(n) {
@@ -16,8 +16,9 @@ function currentSlide(n) {
 
 // Piltide näitamis loogika
 function showSlides(n) {
+
 	let i;
-	let slides = document.getElementsByClassName("mySlides");
+	let slides = document.getElementsByClassName("mySlides");//otsib slaidid
 	let dots = document.getElementsByClassName("dot");
 	// Ringiga edasi esimesele salidile
 	if (n > slides.length) {
