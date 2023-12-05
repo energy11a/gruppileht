@@ -1,3 +1,6 @@
+// Koodi autor on Rasmus Valk koos ChatGPT abiga
+
+// Kuulaja -- töötab juhuslikul hetkel esimese 60s jooksul peale lehe laadimist
 document.addEventListener("DOMContentLoaded", function () {
 	const minute = 60000;//1 minut millisekundites
 
@@ -6,16 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	}, Math.random() * minute);
 });
 
-function angle(cx, cy, ex, ey) {//arvutab nurga kui palju on pööratud
+// Arvutab nurga kahe punkti vahelise sirge ja x-telje vahel
+function angle(cx, cy, ex, ey) {
 	var dy = ey - cy;
 	var dx = ex - cx;
-	var theta = Math.atan2(dy, dx); // range (-PI, PI]
-	theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
-	//if (theta < 0) theta = 360 + theta; // range [0, 360)
+	var theta = Math.atan2(dy, dx);
+	theta *= 180 / Math.PI; // rad -> deg
 	return theta;
 }
 
-function setRandomPosition() {//paneb juhusiku positsiooni ja pildi ja liigutab pilti
+// Objekti loogika
+function setRandomPosition() {
+	// Pildi valimine
 	const element = document.querySelector(".objekt");
 	if (Math.random() < 0.5) {
 		element.style.backgroundImage = `url("../media/images/rakett.png")`;
@@ -23,17 +28,21 @@ function setRandomPosition() {//paneb juhusiku positsiooni ja pildi ja liigutab 
 		element.style.backgroundImage = `url("../media/images/asteroid.png")`;
 	}
 
+	// Akna piirid
 	const maxX = window.innerWidth - element.clientWidth;
 	const maxY = window.innerHeight - element.clientHeight;
 
-	const spriteWidth = 50;//alguslaius
-	const spriteHeight = 50;//algus kõrgus
+	// Pildi suurus
+	const spriteWidth = 50;
+	const spriteHeight = 50;
 
+	// Algus- ja lõppkoordinaadid
 	let randomStartX = 0;
 	let randomStartY = 0;
 	let randomFinishX = 0;
 	let randomFinishY = 0;
-	if (Math.random() < 0.5) {//juhuslikud alguspositsioonid
+	// Nende juhuslik seadmine
+	if (Math.random() < 0.5) {
 		randomStartX = spriteWidth;
 		randomStartY = Math.floor(Math.random() * maxY) - 500;
 		randomFinishX = maxX;
@@ -48,13 +57,15 @@ function setRandomPosition() {//paneb juhusiku positsiooni ja pildi ja liigutab 
 		[randomStartX, randomFinishX] = [randomFinishX, randomStartX];
 	}
 
-	const rotation =//pööramise arvutus
+	// Nurga arvutamine
+	const rotation =
 		angle(randomStartX, randomStartY, randomFinishX, randomFinishY) + 45;
 
+	// CSSi muutmine
 	element.style.width = `${spriteWidth}px`;
 	element.style.height = `${spriteHeight}px`;
 
-	// Create the ending keyframe dynamically
+	// Võtmekaadrite seadmine
 	const styleTag = document.styleSheets[0];
 	const keyframesRule = styleTag.insertRule(//tekitab animatsiooni
 		`@keyframes translateToEnd {
@@ -71,11 +82,11 @@ function setRandomPosition() {//paneb juhusiku positsiooni ja pildi ja liigutab 
 		styleTag.cssRules.length
 	);
 
-	// Apply the translation using the dynamically created keyframe
-	element.style.animation = "translateToEnd 3s linear 1";//paneb elemendile animatsiooni
+	// CSSi muutmine
+	element.style.animation = "translateToEnd 3s linear 1";
 
-	// Hide the element after the animation completes
-	element.addEventListener("animationend", function () {//peidab elemendi
+	// Objekti peitmine kõige lõpus
+	element.addEventListener("animationend", function () {
 		element.style.display = "none";
 	});
 }

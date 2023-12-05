@@ -1,12 +1,10 @@
 body {
 	background-image: url("../media/images/taustapilt.jpg");
 	background-size: cover;
-	/* background-repeat: no-repeat; */
 	background-size: auto;
 	background-color: rgba(80, 80, 80, 1);
 	background-blend-mode: multiply;
 	font-family: Arial, Helvetica, sans-serif;
-	/*overflow: hidden; /* Prevent the screen from expanding when the object leaves the screen */
 	font-size: 20px;
 }
 
@@ -31,17 +29,15 @@ hr {
 	border-top: 2px solid antiquewhite;
 	margin: 1em 0;
 	padding: 0;
-  }
-
-/* Style for the hyperlink */
-a.custom-link {
-	color: lightblue; /* Change this to the desired color */
-	text-decoration: none; /* Remove underlines, if desired */
 }
 
-/* Style for visited links */
+a.custom-link {
+	color: lightblue;
+	text-decoration: none;
+}
+
 a.custom-link:visited {
-	color: aquamarine; /* Change this to the desired color for visited links */
+	color: aquamarine;
 }
 
 .objekt {
@@ -79,7 +75,7 @@ a.custom-link:visited {
 	padding: 50px;
 	margin: 20px;
 	text-shadow: 1px 1px 2px rgb(161, 139, 13), 0 0 1em black, 0 0 0.2em #378602;
- 	margin-top: 10%;
+	margin-top: 10%;
 }
 
 .footer_bottom {
@@ -87,51 +83,50 @@ a.custom-link:visited {
 }
 
 nav {
-    background-color: #000000;
+	background-color: #000000;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 nav li {
-    float: left;
+	float: left;
 }
 
 nav a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 
 nav a:hover {
-    background-color: #363636;
+	background-color: #363636;
 }
 
 .DButton {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    background-color: #202020; /* background color */
-    color: #fff; /* White text color */
-    border: 2px solid #363636; /*  border */
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition on hover */
-    cursor: pointer;
+	display: inline-block;
+	padding: 12px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background-color: #202020;
+	color: #fff;
+	border: 2px solid #363636;
+	border-radius: 8px;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
 }
 
-/* Change the button style on hover */
 .DButton:hover {
-    background-color: #555; /* Lighter on hover */
-    color: #fff; /* White text on hover */
+	background-color: #555;
+	color: #fff;
 }
 
 #codeerror{

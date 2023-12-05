@@ -1,29 +1,42 @@
+// Koodi autor on Rasmus Valk koos ChatGPT abiga
+
+// Pilt mida esmalt näidatakse
 let slideIndex = 1;
 showSlides(slideIndex);//näitab slaidi
 
-function plusSlides(n) {//annab järgmise slaidi
+// Järgmine/eelmine pilt
+function plusSlides(n) {
 	showSlides((slideIndex += n));
 }
 
-function currentSlide(n) {//annab praeguse slaidi
+// N-is pilt
+function currentSlide(n) {
 	showSlides((slideIndex = n));
 }
 
-function showSlides(n) {//funktsiooni slaidi vahetamiseks
+// Piltide näitamis loogika
+function showSlides(n) {
+
 	let i;
 	let slides = document.getElementsByClassName("mySlides");//otsib slaidid
 	let dots = document.getElementsByClassName("dot");
-	if (n > slides.length) {//keerutab tagasi algusesse kui lõpus
+	// Ringiga edasi esimesele salidile
+	if (n > slides.length) {
+		slideIndex = 1;
 	}
-	if (n < 1) {//keerutab lõppu kui alguses
+	// Ringiga tagasi viimasele slaidile
+	if (n < 1) {
 		slideIndex = slides.length;
 	}
-	for (i = 0; i < slides.length; i++) {//peida teised slaidid
+	// Muuda kõik pildid nähtamatuks
+	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
-	for (i = 0; i < dots.length; i++) {//näita õiget slaidi
+	// Muuda kõik täpid tumedaks
+	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
-	slides[slideIndex - 1].style.display = "block";//näitamine on klassinimega ja block on paigutuse jaoks
+	// Muuda õige pilt nähtavaks ja õige täpp heledaks
+	slides[slideIndex - 1].style.display = "block";
 	dots[slideIndex - 1].className += " active";
 }
